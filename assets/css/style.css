@@ -44,6 +44,11 @@ menu li {
     text-decoration: none
 }
 
+.navbar .menu a:hover {
+    background-color: #2d92ea3a;
+    padding: 15px;
+}
+
 .navbar button {
     display: flex;
     padding: 13px 50px;
@@ -55,6 +60,12 @@ menu li {
     font-size: 18px;
     font-family: Inter;
     font-weight: 600;
+}
+
+.navbar button:hover,
+.container-3-sections .header button:hover,
+.plan-details-btn button:hover {
+    background-color: #ff3a03;
 }
 
 .header {
@@ -135,6 +146,10 @@ menu li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.discover-btn button:hover {
+    background-color:  #ff3a03;
 }
 
 .top-places button {
@@ -304,6 +319,11 @@ menu li {
     letter-spacing: 0.36px;
 }
 
+.top-HORE-all-cards>div:hover {
+    padding: 10px;
+    background-color: #2d92ea14;
+}
+
 .location {
     color: #626262;
     font-size: 18px;
@@ -365,6 +385,10 @@ menu li {
     justify-content: space-between;
 }
 
+.feedbacks-container>div:hover {
+    background: rgba(48, 69, 165, 0.873);
+}
+
 .feedback {
     width: 404px;
     padding: 24px 32px;
@@ -417,7 +441,9 @@ menu li {
 }
 
 .destinations ul,
-.destinations li {
+.destinations li,
+.destinations a:link,
+.destinations a:visited {
     color: #FFF;
     font-size: 18px;
     font-family: Inter;
@@ -425,6 +451,11 @@ menu li {
     list-style-type: none;
     line-height: 230%;
     font-weight: 250;
+    text-decoration: none;
+}
+
+.destinations a:hover {
+    text-decoration: underline;
 }
 
 .contact-us header {
@@ -446,6 +477,10 @@ menu li {
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
 }
 
 .social-media {
@@ -494,25 +529,26 @@ menu li {
     position: relative;
 }
 
-.container-3-sections .header, .container-3-sections .top-places {
+.container-3-sections .header,
+.container-3-sections .top-places {
     position: relative;
-  z-index: 1;
+    z-index: 1;
 }
 
 .overlay-section {
     position: absolute;
-padding: 31px 24px;
-flex-direction: row;
-align-items: center;
-gap: 39px;
-width: 1090px;
-height: 130px;
-background: #FFF;
-box-shadow: 0px -1.9647520780563354px 2.2138051986694336px 0px rgba(167, 207, 255, 0.02), 0px -4.721572399139404px 5.32008171081543px 0px rgba(167, 207, 255, 0.03), 0px -8.890301704406738px 10.017241477966309px 0px rgba(167, 207, 255, 0.04), 0px -15.858778953552246px 17.869047164916992px 0px rgba(167, 207, 255, 0.04), 0px -29.66210174560547px 33.422088623046875px 0px rgba(167, 207, 255, 0.05), 0px -71px 80px 0px rgba(167, 207, 255, 0.07);
-top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
+    padding: 31px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 39px;
+    width: 1090px;
+    height: 130px;
+    background: #FFF;
+    box-shadow: 0px -1.9647520780563354px 2.2138051986694336px 0px rgba(167, 207, 255, 0.02), 0px -4.721572399139404px 5.32008171081543px 0px rgba(167, 207, 255, 0.03), 0px -8.890301704406738px 10.017241477966309px 0px rgba(167, 207, 255, 0.04), 0px -15.858778953552246px 17.869047164916992px 0px rgba(167, 207, 255, 0.04), 0px -29.66210174560547px 33.422088623046875px 0px rgba(167, 207, 255, 0.05), 0px -71px 80px 0px rgba(167, 207, 255, 0.07);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 /*end to review this for overlapping section*/
@@ -528,9 +564,9 @@ top: 50%;
     border: none;
     background-color: transparent;
     color: #51728E;
-font-size: 16px;
-font-family: Inter;
-padding: 17px 22.5px;
+    font-size: 16px;
+    font-family: Inter;
+    padding: 17px 22.5px;
 }
 
 .overlay-section-links button:hover {
@@ -548,48 +584,48 @@ padding: 17px 22.5px;
 
 .select-tab button {
     display: flex;
-width: 198px;
-height: 52px;
-padding: 13px 50px;
-justify-content: center;
-align-items: center;
-background: var(--btn-orang, #FF5403);
-border: none;
-gap: 10px;
-color: #FFF;
-font-size: 18px;
-font-family: Inter;
-font-weight: 600;
+    width: 198px;
+    height: 52px;
+    padding: 13px 50px;
+    justify-content: center;
+    align-items: center;
+    background: var(--btn-orang, #FF5403);
+    border: none;
+    gap: 10px;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 600;
 }
 
 select {
-width: 197px;
-height: 55px;
-padding: 15px 21px;
-justify-content: space-between;
-align-items: center;
-border: 1px solid #2D93EA;
-background: #FFF;
-color: #2D93EA;
-font-size: 16px;
-font-family: Inter;
-font-weight: 300;
+    width: 197px;
+    height: 55px;
+    padding: 15px 21px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2D93EA;
+    background: #FFF;
+    color: #2D93EA;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 300;
 }
 
 input[type=date] {
-width: 197px;
-padding: 15px 21px;
-justify-content: space-between;
-align-items: center;
-border: 1px solid #2D93EA;
-background: #FFF;
-color: #2D93EA;
-font-size: 16px;
-font-family: Inter;
-font-weight: 300;
+    width: 197px;
+    padding: 15px 21px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2D93EA;
+    background: #FFF;
+    color: #2D93EA;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 300;
 }
 
-input[type=number]  {
+input[type=number] {
     display: flex;
     width: 197px;
     height: 55px;
@@ -597,11 +633,9 @@ input[type=number]  {
     justify-content: space-between;
     align-items: center;
     border: 1px solid #2D93EA;
-background: #FFF;
-color: #2D93EA;
-font-size: 16px;
-font-family: Inter;
-font-weight: 300;
+    background: #FFF;
+    color: #2D93EA;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 300;
 }
-
-
