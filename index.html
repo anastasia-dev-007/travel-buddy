@@ -10,39 +10,49 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kablammo&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Varta:wght@300;400;500;600;700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/856244ccb6.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <nav class="navbar">
-    <span style="cursor:pointer">
-        <div class="logo">
-            <img src="/assets/media/logo.png" alt="logo" width="44" height="47" />
-            <img src="/assets/media/logo-name.png" alt="logo-name" width="115" height="16" />
+    <div class="navbar-container">
+        <span style="cursor:pointer">
+            <div class="logo">
+                <img src="/assets/media/logo.png" alt="logo" width="44" height="47" />
+                <img src="/assets/media/logo-name.png" alt="logo-name" width="115" height="16" />
+            </div>
+        </span>
+    
+    
+        <div class="menu">
+            <ul>
+                <li><a href="#"><span style="cursor:progress">Home</span></a></li>
+                <li><a href="#header">About</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </span>
+    
+        <div>
+            <button>Book Now</button>
+        </div>
 
-
-    <div class="menu">
-        <ul>
-            <li><a href="#"><span style="cursor:progress">Home</span></a></li>
-            <li><a href="#header">About</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#places">Places</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <div>
-        <button>Book Now</button>
+        <div class="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
 </nav>
 
-<div class="container-3-sections">
-    <header id="header" class="header">
-        <h1>Travel Buddy</h1>
-        <p>Let’s start your journey with us, your dream will come true</p>
-        <button><span style="cursor:pointer">Discover Now</span></button>
-    </header>
 
+<header id="header" class="header">
+    <h1>Travel Buddy</h1>
+    <p>Let’s start your journey with us, your dream will come true</p>
+    <button><span style="cursor:pointer">Discover Now</span></button>
+</header>
+
+
+
+<div class="container-2-sections">
     <section class="overlay-section">
         <div class="overlay-section-links">
             <button>Hotel</button>
@@ -52,16 +62,16 @@
 
         <div class="select-tab">
             <!--am avut la aceasta div class="select-tab"  problema ca cand puneam urmatorul css:
-            .select-tab {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-            }
-            pai nu se creea spatiu intre elemente.
-Note: am incercat si sa scot elementele din div, dar oricum. 
-Spatiile se creeaza doar prin gap.
-Nu stii care ar fi cauza?
--->
+                .select-tab {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+                }
+                pai nu se creea spatiu intre elemente.
+    Note: am incercat si sa scot elementele din div, dar oricum. 
+    Spatiile se creeaza doar prin gap.
+    Nu stii care ar fi cauza?
+    -->
             <select id="destinationcountry">
                 <option value="start">Choose Place</option>
                 <option value="Singapure">Singapure</option>
@@ -111,39 +121,51 @@ Nu stii care ar fi cauza?
 </div>
 
 <section class="event">
-    <div class="event-btn">
-        <button><span style="cursor:pointer"><img src="/assets/media/previous.png" alt="previous" width="86"
-                    height="86" /></span></button>
-        <button><span style="cursor:pointer"><img src="/assets/media/next.png" alt="next" width="86"
-                    height="86" /></span></button>
-    </div>
-
-    <div class="event-card">
-        <header class="event-card-header">
-            <p>Upcoming Event</p>
-            <h3>Bali - Indonesia</h3>
-        </header>
-
-        <p>Waters make fish every without firmament saw had. Morning
-            air subdue. Our, air very one. Whales grass is fish whales
-            winged.</p>
-        <ul>
-            <li>date : 12 Aug 2020</li>
-            <li>cost : Start from Rp3000.000,00</li>
-            <li>organizer : TravelBuddy</li>
-        </ul>
-        <div class="rating">
-            <p>Rating :
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-            </p>
+    <div class="event-container">
+        <div class="event-btn">
+            <button><span style="cursor:pointer"><img src="/assets/media/previous.png" alt="previous" width="86"
+                        height="86" /></span></button>
+            <button><span style="cursor:pointer"><img src="/assets/media/next.png" alt="next" width="86"
+                        height="86" /></span></button>
         </div>
+    
+        <div class="event-card">
+            <header class="event-card-header">
+                <p>Upcoming Event</p>
+                <h3>Bali - Indonesia</h3>
+            </header>
+    
+            <p>Waters make fish every without firmament saw had. Morning
+                air subdue. Our, air very one. Whales grass is fish whales
+                winged.</p>
+            <ul>
+                <li>date : 12 Aug 2020</li>
+                <li>cost : Start from Rp3000.000,00</li>
+                <li>organizer : TravelBuddy</li>
+            </ul>
+            <div class="rating">
+                <p>Rating :
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                </p>
+            </div>
 
-        <div class="plan-details-btn">
-            <button>Plan Details</button>
+            <div class="rating-mobile">
+                <p>
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                </p>
+            </div>
+    
+            <div class="plan-details-btn">
+                <button>Plan Details</button>
+            </div>
         </div>
     </div>
 </section>
@@ -221,61 +243,63 @@ Nu stii care ar fi cauza?
 </section>
 
 <section class="review">
-    <header>
-        <p>What they Said</p>
-        <div class="review-nav-buttons">
-            <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-left"></i></span></button></div>
-            <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-right"></i></span></button></div>
+    <div class="review-container">
+        <header>
+            <p>What they Said</p>
+            <div class="review-nav-buttons">
+                <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-left"></i></span></button></div>
+                <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-right"></i></span></button></div>
             </div>
-    </header>
-    <!--Initial era:
- <div class="review-nav-buttons">
-    <button><i class="fa-solid fa-chevron-left"></i></button>
-    <button><i class="fa-solid fa-chevron-right"></i></button>
- </div>
-dar in asa forma nu imi reusea nicicum sa pun spatiu intre ele de 25px. Era posibil de facut acest spatiu fara a le pune in divisions?
-
-Si in al doilea rand nu pot scapa de border alb in jurul butoanelor.
-    -->
-
-    <div class="feedbacks-container">
-        <div class="feedback">
-            <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+        </header>
+        <!--Initial era:
+     <div class="review-nav-buttons">
+        <button><i class="fa-solid fa-chevron-left"></i></button>
+        <button><i class="fa-solid fa-chevron-right"></i></button>
+     </div>
+    dar in asa forma nu imi reusea nicicum sa pun spatiu intre ele de 25px. Era posibil de facut acest spatiu fara a le pune in divisions?
+    
+    Si in al doilea rand nu pot scapa de border alb in jurul butoanelor.
+        -->
+    
+        <div class="feedbacks-container">
+            <div id="fb1" class="feedback">
+                <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                </div>
+                <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
+                    fish whales
+                    winged.</p>
+                <p>-Reza mukhti</p>
             </div>
-            <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
-                fish whales
-                winged.</p>
-            <p>-Reza mukhti</p>
-        </div>
-
-        <div class="feedback">
-            <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+    
+            <div id="fb2" class="feedback">
+                <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                </div>
+                <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
+                    fish whales
+                    winged.</p>
+                <p>-Reza mukhti</p>
             </div>
-            <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
-                fish whales
-                winged.</p>
-            <p>-Reza mukhti</p>
-        </div>
-
-        <div class="feedback">
-            <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
-                <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+    
+            <div id="fb3" class="feedback">
+                <div> <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                    <img src="/assets/media/Star.png" alt="star" width="25" height="35" />
+                </div>
+                <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
+                    fish whales
+                    winged.</p>
+                <p>-Reza mukhti</p>
             </div>
-            <p>Waters make fish every without firmament saw had. Morning air subdue. Our, air very one. Whales grass is
-                fish whales
-                winged.</p>
-            <p>-Reza mukhti</p>
         </div>
     </div>
 </section>
@@ -319,45 +343,49 @@ Si in al doilea rand nu pot scapa de border alb in jurul butoanelor.
     </div>
 </section>
 
-<footer id="contact" class="big-footer">
-    <div class="footer-logo">
-        <img src="/assets/media/logo.png" alt="logo" width="154" height="161" />
-        <img src="/assets/media/logo-name (2).png" alt="logo-name" width="262" height="37" />
-    </div>
-
-    <div class="destinations">
-        <header>DISCOVER DESTINATION</header>
-
-        <ul>
-            <li><a href="#">Bali</a></li>
-            <li><a href="#">Karimun Jawa</a></li>
-            <li><a href="#">Jepara</a></li>
-            <li><a href="#">Lombok</a></li>
-            <li><a href="#">Yogyakarta</a></li>
-            <li><a href="#">Flores</a></li>
-        </ul>
-    </div>
-
-    <div class="contact-us">
-        <header>CONTACT US</header>
-        <p>24 Shipley St.Arvada, CO 80003</p>
-        <p>09378493810</p>
-        <a href="#">TravelBuddy@gmail.com</a>
-
-        <div class="social-media">
-            <h4>Social Media</h4>
-            <div class="social-media-icons">
-                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-            </div>
+<footer class="big-footer">
+    <div id="contact" class="big-footer-container">
+        <div class="footer-logo">
+            <img id="arrow" src="/assets/media/logo.png" alt="logo" width="154" height="161" />
+            <img id="text" src="/assets/media/logo-name (2).png" alt="logo-name" width="262" height="37" />
         </div>
-
+    
+        <div class="destinations">
+            <header>DISCOVER DESTINATION</header>
+    
+            <ul>
+                <li><a href="#">Bali</a></li>
+                <li><a href="#">Karimun Jawa</a></li>
+                <li><a href="#">Jepara</a></li>
+                <li><a href="#">Lombok</a></li>
+                <li><a href="#">Yogyakarta</a></li>
+                <li><a href="#">Flores</a></li>
+            </ul>
+        </div>
+    
+        <div class="contact-us">
+            <header>CONTACT US</header>
+            <p>24 Shipley St.Arvada, CO 80003</p>
+            <p>09378493810</p>
+            <a href="#">TravelBuddy@gmail.com</a>
+    
+            <div class="social-media">
+                <h4>Social Media</h4>
+                <div class="social-media-icons">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+            </div>
+    
+        </div>
     </div>
 </footer>
 
 <footer class="legals">
-    <p>@Copyright 2022 TravelBuddy</p>
+    <div class="legals-container">
+        <p>@Copyright 2022 TravelBuddy</p>
+    </div>
 </footer>
 
 </html>

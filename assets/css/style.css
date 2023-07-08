@@ -4,15 +4,27 @@
     margin: 0;
 }
 
+body {
+    background-color: #f3f3f3;
+    ;
+}
+
 .navbar {
+    background-color: #f3f3f3;
+
+}
+
+.navbar-container {
     display: flex;
-    width: 1512px;
+    width: 100%;
+    max-width: 1512px;
     height: 100px;
     padding: 22px 100px;
     justify-content: center;
     align-items: center;
     gap: 195px;
     flex-shrink: 0;
+    margin: auto;
 }
 
 .logo {
@@ -44,12 +56,12 @@ menu li {
     text-decoration: none
 }
 
-.navbar .menu a:hover {
+.navbar-container .menu a:hover {
     background-color: #2d92ea3a;
     padding: 15px;
 }
 
-.navbar button {
+.navbar-container button {
     display: flex;
     padding: 13px 50px;
     align-items: flex-start;
@@ -62,14 +74,14 @@ menu li {
     font-weight: 600;
 }
 
-.navbar button:hover,
+.navbar-container button:hover,
 .container-3-sections .header button:hover,
 .plan-details-btn button:hover {
     background-color: #ff3a03;
 }
 
 .header {
-    width: 1512px;
+    width: 100%;
     height: 722px;
     flex-shrink: 0;
     background: url(/assets/media/banner_bg\ 1.png), lightgray 50% / cover no-repeat;
@@ -78,12 +90,15 @@ menu li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-position: center;
+    background-size: cover;
 }
 
 .header h1 {
     color: #FFF;
-    font-size: 96px;
+    font-size: 8vw;
+    /*am pus aici font-size responsive in loc de 96px
+    https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
     font-family: Inter;
     font-weight: 700;
     letter-spacing: 6.72px;
@@ -91,7 +106,9 @@ menu li {
 
 .header p {
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.5vw;
+    /*am pus aici font-size responsive in loc de 20px
+    https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
     font-family: Inter;
     letter-spacing: 0.6px;
     padding-bottom: 50px;
@@ -149,7 +166,7 @@ menu li {
 }
 
 .discover-btn button:hover {
-    background-color:  #ff3a03;
+    background-color: #ff3a03;
 }
 
 .top-places button {
@@ -167,16 +184,24 @@ menu li {
     margin-bottom: 109px;
 }
 
-.event {
+.event-container {
     background-image: url(/assets/media/event_bg\ 1.png);
-    width: 1517px;
-    height: 879px;
+    width: 100%;
+    max-width: 1512px;
+    height: clamp(700px, 1.5vw, 879px);
     flex-shrink: 0;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+}
+
+.event {
+    display: grid;
+    place-items: center;
 }
 
 .event-btn {
@@ -196,7 +221,7 @@ menu li {
     position: absolute;
     margin: 118px 230px 145px 650px;
     display: inline-flex;
-    height: 616px;
+    height: clamp (500px, 1.5vw, 616px);
     padding: 50px;
     flex-direction: column;
     justify-content: center;
@@ -215,7 +240,7 @@ menu li {
 
 .event-card-header h3 {
     color: #041562;
-    font-size: 32px;
+    font-size: clamp(25px, 1.2vw, 32px);
     font-family: Inter;
     font-weight: 600;
     letter-spacing: 1.6px;
@@ -223,7 +248,7 @@ menu li {
 
 .event-card p {
     color: #626262;
-    font-size: 18px;
+    font-size: clamp(16px, 1.2vw, 18px);
     font-family: Inter;
     line-height: 170%;
     letter-spacing: 0.36px;
@@ -233,7 +258,7 @@ menu li {
 .event-card li {
     list-style-type: none;
     color: #606060;
-    font-size: 18px;
+    font-size: clamp(16px, 1.2vw, 18px);
     font-family: Inter;
     line-height: 200%;
     letter-spacing: 0.36px;
@@ -242,6 +267,10 @@ menu li {
 .rating {
     gap: 5px;
     margin-bottom: 30px;
+}
+
+.rating-mobile {
+    display: none;
 }
 
 .rating p {
@@ -270,6 +299,7 @@ menu li {
 .top-HORE {
     padding-top: 124px;
     position: relative;
+
 }
 
 .top-HORE header h2 {
@@ -349,18 +379,24 @@ menu li {
 
 .review {
     background: #041562;
-    padding: 100px;
 }
 
-.review header {
+.review-container {
+    background: #041562;
+    padding: 100px;
+    max-width: 1512px;
+    margin: auto;
+}
+
+.review-container header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
 }
 
-.review header p {
+.review-container header p {
     color: #FFF;
-    font-size: 36px;
+    font-size: clamp(32px, 1.5vw, 36px);
     font-family: Inter;
     font-weight: 600;
     letter-spacing: 0.72px;
@@ -382,7 +418,9 @@ menu li {
 
 .feedbacks-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
 .feedbacks-container>div:hover {
@@ -401,21 +439,41 @@ menu li {
 .feedback p {
     width: 345px;
     color: #FFF;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-family: Inter;
     line-height: 170%;
     letter-spacing: 0.36px;
     margin-top: 35px;
 }
 
+.review-container header {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
 .big-footer {
+    background: #19224D;
+    display: grid;
+    place-items: center;
+
+}
+
+.big-footer-container {
     display: flex;
-    width: 1512px;
-    height: 454px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1512px;
+    height: 100%;
     padding: 108px 100px;
     justify-content: space-between;
     align-items: flex-start;
     background: #19224D;
+}
+
+.big-footer-container div {
+    margin-bottom: 50px;
 }
 
 .footer-logo {
@@ -445,7 +503,7 @@ menu li {
 .destinations a:link,
 .destinations a:visited {
     color: #FFF;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-family: Inter;
     letter-spacing: 0.9px;
     list-style-type: none;
@@ -471,7 +529,7 @@ menu li {
 .contact-us a:link,
 .contact-us a:visited {
     color: #FFF;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-family: Inter;
     letter-spacing: 0.36px;
     color: white;
@@ -488,7 +546,7 @@ menu li {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    width: 150px;
+    width: 100%;
     height: 70px;
     margin-top: 23px;
 }
@@ -508,47 +566,57 @@ menu li {
 }
 
 .legals {
+    background: #000B3E;
+    display: grid;
+    place-items: center;
+}
+
+.legals-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1512px;
+    width: 100%;
+    max-width: 1512px;
     height: 65px;
     background: #000B3E;
 }
 
-.legals p {
+.legals-container p {
     color: #C4C4C4;
     font-size: 16px;
     font-family: Inter;
     letter-spacing: 0.8px;
 }
 
-/*start to review this for overlapping section*/
-
-.container-3-sections {
-    position: relative;
+.navbar-container,
+.top-places,
+.top-HORE {
+    background-color: #F3F3F3;
+    ;
 }
 
-.container-3-sections .header,
-.container-3-sections .top-places {
+/*start to review this for overlapping section*/
+
+.container-2-sections {
     position: relative;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 1512px;
+    margin: auto;
 }
 
 .overlay-section {
     position: absolute;
     padding: 31px 24px;
+    width: 75%;
+    height: 192px;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 39px;
-    width: 1090px;
-    height: 130px;
     background: #FFF;
     box-shadow: 0px -1.9647520780563354px 2.2138051986694336px 0px rgba(167, 207, 255, 0.02), 0px -4.721572399139404px 5.32008171081543px 0px rgba(167, 207, 255, 0.03), 0px -8.890301704406738px 10.017241477966309px 0px rgba(167, 207, 255, 0.04), 0px -15.858778953552246px 17.869047164916992px 0px rgba(167, 207, 255, 0.04), 0px -29.66210174560547px 33.422088623046875px 0px rgba(167, 207, 255, 0.05), 0px -71px 80px 0px rgba(167, 207, 255, 0.07);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+    top: -50px;
 }
 
 /*end to review this for overlapping section*/
@@ -638,4 +706,162 @@ input[type=number] {
     font-size: 16px;
     font-family: Inter;
     font-weight: 300;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-container {
+        gap: 0px;
+        padding: 0px 20px;
+        justify-content: space-between;
+    }
+
+    .menu,
+    .navbar-container button {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        color: #FF5403;
+        font-size: 35px;
+    }
+
+    .event-card {
+        margin: 0;
+        width: 70%;
+        gap: 0px;
+    }
+
+    .event-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .event-btn {
+        z-index: 2;
+        margin: 0;
+        width: 98%;
+    }
+
+    .event-card p {
+        margin-bottom: 10px;
+        line-height: 130%;
+    }
+
+    .event-card ul,
+    .event-card li {
+        line-height: 140%;
+    }
+
+    .rating {
+        display: none;
+    }
+
+    .rating-mobile {
+        display: block;
+    }
+
+    .top-HORE-all-cards {
+        flex-direction: column;
+        padding-left: 40px;
+    }
+
+
+    .top-HORE-card img {
+        width: 90%;
+        height: 100%;
+    }
+
+    .select-tab {
+        display: none;
+    }
+
+    .top-places header {
+        margin-bottom: 20px;
+    }
+
+    .top-places-cards {
+        gap: 20px;
+    }
+
+    .top-places-cards img {
+        width: 80%;
+        height: auto;
+    }
+
+    #fb2,
+    #fb3 {
+        display: none;
+    }
+
+    .review-container {
+        padding: 50px;
+    }
+
+    .feedback {
+        width: 90%;
+    }
+
+    .feedback p {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .big-footer-container {
+        padding: 20px 50px 0px;
+    }
+
+    #arrow {
+        width: 100px;
+        height: 100px;
+    }
+
+    #text {
+        width: 170px;
+        height: 25px;
+    }
+
+    .big-footer-container div {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+    .destinations header {
+        margin-bottom: 20px;
+        text-align: start;
+    }
+
+    .contact-us header {
+        margin-bottom: 20px;
+    }
+
+
+    .destinations ul,
+    .destinations li,
+    .destinations a:link,
+    .destinations a:visited {
+        line-height: 100%;
+        margin-bottom: 10px;
+    }
+
+    /*sa incerc aici sa aliniz normal cu spacebetween*/
+    .social-media {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-media-icons {
+        display: flex;
+        justify-content: space-between;
+    }
 }
