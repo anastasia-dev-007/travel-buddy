@@ -82,7 +82,7 @@ menu li {
 
 .header {
     width: 100%;
-    height: 722px;
+    height: clamp(650px, 1.5vw, 722px);
     flex-shrink: 0;
     background: url(/assets/media/banner_bg\ 1.png), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ menu li {
 
 .header h1 {
     color: #FFF;
-    font-size: 8vw;
+    font-size: clamp(40px, 1.5vw, 96px);
     /*am pus aici font-size responsive in loc de 96px
     https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
     font-family: Inter;
@@ -106,7 +106,7 @@ menu li {
 
 .header p {
     color: #FFF;
-    font-size: 1.5vw;
+    font-size: clamp(10px, 1.5vw, 20px);
     /*am pus aici font-size responsive in loc de 20px
     https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
     font-family: Inter;
@@ -137,7 +137,7 @@ menu li {
 .top-places h3 {
     color: #041562;
     text-align: center;
-    font-size: 36px;
+    font-size: clamp(30px, 1.5vw, 36px);
     font-family: Inter;
     font-weight: 600;
     letter-spacing: 1.8px;
@@ -146,7 +146,7 @@ menu li {
 .top-places p {
     color: #626262;
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(15px, 1.5vw, 18px);
     font-family: Inter;
     letter-spacing: 0.9px;
 }
@@ -305,7 +305,7 @@ menu li {
 .top-HORE header h2 {
     color: #041562;
     text-align: center;
-    font-size: 36px;
+    font-size: clamp(32px, 1.5vw, 36px);
     font-family: Inter;
     font-weight: 600;
     letter-spacing: 1.8px;
@@ -315,26 +315,26 @@ menu li {
 .top-HORE header p {
     color: #626262;
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(15px, 1.5vw, 18px);
     font-family: Inter;
     letter-spacing: 0.9px;
-    margin-bottom: 75px;
+    margin-bottom: clamp(40px,1.5vw,75px);
 }
 
 .top-HORE-all-cards {
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin-bottom: 172px;
+    margin-bottom: clamp(60px,1.5vw,172px);
 }
 
 .top-HORE-card header p {
     color: #000;
-    font-size: 24px;
+    font-size: clamp(20px,1.5vw,24px);
     font-family: Inter;
     letter-spacing: 1.2px;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin-top: clamp(20px, 1.5vw,40px);
+    margin-bottom: clamp(10px,1.5vw,25px);
     text-align: start;
 }
 
@@ -356,7 +356,7 @@ menu li {
 
 .location {
     color: #626262;
-    font-size: 18px;
+    font-size: clamp(15px,1.5vw,18px);
     font-family: Inter;
     font-weight: 300;
     line-height: 170%;
@@ -366,7 +366,7 @@ menu li {
 
 .price {
     color: #020202;
-    font-size: 18px;
+    font-size: clamp(15px,1.5vw,18px);
     font-family: Inter;
     font-weight: 300;
     line-height: 170%;
@@ -718,6 +718,7 @@ input[type=number] {
         gap: 0px;
         padding: 0px 20px;
         justify-content: space-between;
+        height: 80px;
     }
 
     .menu,
@@ -730,6 +731,7 @@ input[type=number] {
         color: #FF5403;
         font-size: 35px;
     }
+
 
     .event-card {
         margin: 0;
