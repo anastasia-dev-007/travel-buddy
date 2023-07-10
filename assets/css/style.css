@@ -82,7 +82,7 @@ menu li {
 
 .header {
     width: 100%;
-    height: clamp(650px, 1.5vw, 722px);
+    height: 722px;
     flex-shrink: 0;
     background: url(/assets/media/banner_bg\ 1.png), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
@@ -96,9 +96,7 @@ menu li {
 
 .header h1 {
     color: #FFF;
-    font-size: clamp(40px, 1.5vw, 96px);
-    /*am pus aici font-size responsive in loc de 96px
-    https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
+    font-size: 96px;
     font-family: Inter;
     font-weight: 700;
     letter-spacing: 6.72px;
@@ -106,9 +104,7 @@ menu li {
 
 .header p {
     color: #FFF;
-    font-size: clamp(10px, 1.5vw, 20px);
-    /*am pus aici font-size responsive in loc de 20px
-    https://www.w3schools.com/howto/howto_css_responsive_text.asp*/
+    font-size: 20px;
     font-family: Inter;
     letter-spacing: 0.6px;
     padding-bottom: 50px;
@@ -137,7 +133,7 @@ menu li {
 .top-places h3 {
     color: #041562;
     text-align: center;
-    font-size: clamp(30px, 1.5vw, 36px);
+    font-size: clamp(30px, 2vw, 36px);
     font-family: Inter;
     font-weight: 600;
     letter-spacing: 1.8px;
@@ -180,15 +176,15 @@ menu li {
     font-size: 18px;
     font-family: Inter;
     font-weight: 600;
-    margin-top: clamp(40px, 1.5vw,70px);
-    margin-bottom: clamp(40px, 1.5vw, 109px);
+    margin-top: 70px;
+    margin-bottom: 109px;
 }
 
 .event-container {
     background-image: url(/assets/media/event_bg\ 1.png);
     width: 100%;
     max-width: 1512px;
-    height: clamp(600px, 1.5vw, 879px);
+    height: 879px;
     flex-shrink: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -221,8 +217,8 @@ menu li {
     position: absolute;
     margin: 118px 230px 145px 650px;
     display: inline-flex;
-    height: clamp (500px, 1.5vw, 616px);
-    padding: clamp(30px,1.5vw,50px);
+    height: 616px;
+    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -291,13 +287,13 @@ menu li {
     background: #FF5403;
     border: none;
     color: #FFF;
-    font-size: clamp(15px,1.5vw,16px);
+    font-size: clamp(15px, 1.5vw, 16px);
     font-family: Inter;
     font-weight: 600;
 }
 
 .top-HORE {
-    padding-top: clamp(40px,1.5vw,124px);
+    padding-top: clamp(40px, 1.5vw, 124px);
     position: relative;
 
 }
@@ -318,23 +314,23 @@ menu li {
     font-size: clamp(15px, 1.5vw, 18px);
     font-family: Inter;
     letter-spacing: 0.9px;
-    margin-bottom: clamp(40px,1.5vw,75px);
+    margin-bottom: clamp(40px, 1.5vw, 75px);
 }
 
 .top-HORE-all-cards {
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin-bottom: clamp(60px,1.5vw,172px);
+    margin-bottom: clamp(60px, 1.5vw, 172px);
 }
 
 .top-HORE-card header p {
     color: #000;
-    font-size: clamp(20px,1.5vw,24px);
+    font-size: clamp(20px, 1.5vw, 24px);
     font-family: Inter;
     letter-spacing: 1.2px;
-    margin-top: clamp(20px, 1.5vw,40px);
-    margin-bottom: clamp(10px,1.5vw,25px);
+    margin-top: clamp(20px, 1.5vw, 40px);
+    margin-bottom: clamp(10px, 1.5vw, 25px);
     text-align: start;
 }
 
@@ -356,7 +352,7 @@ menu li {
 
 .location {
     color: #626262;
-    font-size: clamp(15px,1.5vw,18px);
+    font-size: clamp(15px, 1.5vw, 18px);
     font-family: Inter;
     font-weight: 300;
     line-height: 170%;
@@ -366,7 +362,7 @@ menu li {
 
 .price {
     color: #020202;
-    font-size: clamp(15px,1.5vw,18px);
+    font-size: clamp(15px, 1.5vw, 18px);
     font-family: Inter;
     font-weight: 300;
     line-height: 170%;
@@ -480,7 +476,7 @@ menu li {
     display: flex;
     flex-direction: column;
     width: 337px;
-    height: clamp(200px, 1.5vw,249px);
+    height: clamp(200px, 1.5vw, 249px);
     padding: 11.539px 37.868px 11.622px 36.654px;
     justify-content: center;
     align-items: center;
@@ -583,7 +579,7 @@ menu li {
 
 .legals-container p {
     color: #C4C4C4;
-    font-size: clamp(14px,1.5vw,16px);
+    font-size: clamp(14px, 1.5vw, 16px);
     font-family: Inter;
     letter-spacing: 0.8px;
 }
@@ -622,7 +618,7 @@ menu li {
 /*end to review this for overlapping section*/
 
 .overlay-section-links {
-    margin-bottom: 39px;
+    margin-bottom: 19px;
 }
 
 .overlay-section-links button {
@@ -644,15 +640,20 @@ menu li {
 
 .select-tab {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     gap: 26px;
-    width: 700px;
+    width: 100%;
+}
+
+.select-tab div {
+    width: 17%;
 }
 
 .select-tab button {
     display: flex;
-    width: 198px;
+    width: 100%;
+    /*width: 198px;*/
     height: 52px;
     padding: 13px 50px;
     justify-content: center;
@@ -667,7 +668,8 @@ menu li {
 }
 
 select {
-    width: 197px;
+    width: 100%;
+    /*width: 197px;*/
     height: 55px;
     padding: 15px 21px;
     justify-content: space-between;
@@ -681,7 +683,8 @@ select {
 }
 
 input[type=date] {
-    width: 197px;
+    width: 100%;
+    /*width: 197px;*/
     padding: 15px 21px;
     justify-content: space-between;
     align-items: center;
@@ -695,7 +698,8 @@ input[type=date] {
 
 input[type=number] {
     display: flex;
-    width: 197px;
+    width: 100%;
+    /*width: 197px;*/
     height: 55px;
     padding: 15px 21px;
     justify-content: space-between;
@@ -708,9 +712,42 @@ input[type=number] {
     font-weight: 300;
 }
 
+input[type="number"]::placeholder {
+    color: #2D93EA;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.flight-date-input,
+.return-date-input {
+    position: relative;
+}
+
+.flight-date-input input:focus,
+input:focus .return-date-input input:focus {
+    border: none;
+}
+
+.flight-date-input label,
+.return-date-input label {
+    color: #2D93EA;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
+
 .mobile-menu {
     display: none;
 }
+
 
 @media screen and (max-width: 768px) {
 
@@ -732,16 +769,30 @@ input[type=number] {
         font-size: 35px;
     }
 
+    .header {
+        height: 650px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        font-size: 10px;
+    }
 
     .event-card {
         margin: 0;
         width: 70%;
         gap: 0px;
+        padding: 30px;
+        height: 500px;
     }
 
     .event-container {
         display: flex;
         justify-content: center;
+        height: 600px;
     }
 
     .event-btn {
@@ -775,12 +826,8 @@ input[type=number] {
 
 
     .top-HORE-card img {
-        width: 90%;
+        width: 80%;
         height: 100%;
-    }
-
-    .select-tab {
-        display: none;
     }
 
     .top-places header {
@@ -794,6 +841,11 @@ input[type=number] {
     .top-places-cards img {
         width: 80%;
         height: auto;
+    }
+
+    .top-places button {
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .review-nav-buttons i {
@@ -874,7 +926,9 @@ input[type=number] {
         justify-content: space-between;
     }
 
-    .contact-us p, .contact-us a:link, .contact-us a:visited {
+    .contact-us p,
+    .contact-us a:link,
+    .contact-us a:visited {
         margin-bottom: 0px;
     }
 }
