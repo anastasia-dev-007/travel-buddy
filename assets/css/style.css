@@ -932,3 +932,11 @@ input:focus .return-date-input input:focus {
         margin-bottom: 0px;
     }
 }
+
+@media only screen and (min-width: 769px) and  (max-width: 1300px) {
+.event-card {
+    margin: 0 auto;
+    width: 50%;
+}
+
+}
