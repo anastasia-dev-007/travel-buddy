@@ -751,6 +751,10 @@ input:focus .return-date-input input:focus {
 
 @media screen and (max-width: 768px) {
 
+    body {
+        min-width: 375px;
+    }
+
     .navbar-container {
         gap: 0px;
         padding: 0px 20px;
@@ -826,7 +830,6 @@ input:focus .return-date-input input:focus {
 
 
     .top-HORE-card img {
-        width: 80%;
         height: 100%;
     }
 
@@ -931,6 +934,20 @@ input:focus .return-date-input input:focus {
     .contact-us a:visited {
         margin-bottom: 0px;
     }
+
+.overlay-section {
+    padding: 0px;
+    top: -150px;
+}
+.select-tab {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.select-tab div {
+    width: 100%;
+}
+
 }
 
 @media only screen and (min-width: 769px) and  (max-width: 1300px) {
