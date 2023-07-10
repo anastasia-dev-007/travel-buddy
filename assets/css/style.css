@@ -20,9 +20,8 @@ body {
     max-width: 1512px;
     height: 100px;
     padding: 22px 100px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 195px;
     flex-shrink: 0;
     margin: auto;
 }
@@ -321,6 +320,7 @@ menu li {
     display: flex;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: clamp(60px, 1.5vw, 172px);
 }
 
