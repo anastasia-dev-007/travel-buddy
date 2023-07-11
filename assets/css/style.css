@@ -154,6 +154,13 @@ menu li {
     gap: 50px;
 }
 
+.top-places-cards img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 1s ease;
+    box-shadow: 10px 10px 8px #888888;
+}
+
 .discover-btn {
     display: flex;
     justify-content: center;
@@ -346,7 +353,7 @@ menu li {
 }
 
 .top-HORE-all-cards>div:hover {
-    padding: 10px;
+    /*padding: 10px; scot pentru ca altfel nu imi reuseste sa fac diviziunea sa nu sara*/ 
     background-color: #2d92ea14;
 }
 
@@ -771,7 +778,7 @@ menu li {
 
     .event-card {
         margin: 0;
-        width: 70%;
+        width: 60%;
         gap: 0px;
         padding: 30px;
         height: 500px;
@@ -813,8 +820,13 @@ menu li {
     }
 
 
-    .top-HORE-card img {
-        height: 100%;
+    .top-HORE-card {
+         margin: auto;
+    }
+
+    .top-HORE-card img { /*responsive image*/
+       max-width: 90%;
+        height: auto;
     }
 
     .top-places header {
@@ -832,6 +844,11 @@ menu li {
 
     .top-places button {
         margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .review-container header {
+        flex-direction: column;
         margin-bottom: 40px;
     }
 
@@ -929,6 +946,8 @@ menu li {
     .event-card {
         margin: 0 auto;
         width: 50%;
+        right: 0px;
+        left: 0px
     }
 
 }
