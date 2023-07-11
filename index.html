@@ -52,8 +52,8 @@
 
 
 
-<div class="container-2-sections">
-    <section class="overlay-section">
+<section class="container-2-sections">
+    <div class="overlay-section">
         <div class="overlay-section-links">
             <button>Hotel</button>
             <button>Ticket</button>
@@ -61,17 +61,7 @@
         </div>
 
         <div class="select-tab">
-            <!--am avut la aceasta div class="select-tab"  problema ca cand puneam urmatorul css:
-                .select-tab {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-                }
-                pai nu se creea spatiu intre elemente.
-    Note: am incercat si sa scot elementele din div, dar oricum. 
-    Spatiile se creeaza doar prin gap.
-    Nu stii care ar fi cauza?
-    -->
+            
             <select id="destinationcountry">
                 <option value="start">Choose Place</option>
                 <option value="Singapure">Singapure</option>
@@ -99,9 +89,9 @@
                 <!--cum se stilizeaza aici frumos forms, inputs, etc?-->
             <button>Search</button>
         </div>
-    </section>
+    </div>
 
-    <section id="places" class="top-places">
+    <div id="places" class="top-places">
         <header>
             <h3>Top Places to visit</h3>
             <p>The Best Place to Stay in Indonesia</p>
@@ -115,8 +105,8 @@
         </div>
 
         <div class="discover-btn"><button>Discover More</button></div>
-    </section>
-</div>
+    </div>
+</section>
 
 <section class="event">
     <div class="event-container">

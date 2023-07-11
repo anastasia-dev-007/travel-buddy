@@ -384,12 +384,6 @@ menu li {
     margin: auto;
 }
 
-.review-container header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 80px;
-}
-
 .review-container header p {
     color: #FFF;
     font-size: clamp(32px, 1.5vw, 36px);
@@ -443,10 +437,13 @@ menu li {
 }
 
 .review-container header {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     margin-bottom: 20px;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
 }
 
 .big-footer {
@@ -674,6 +671,27 @@ menu li {
     display: none;
 }
 
+@media screen and (max-width: 1094px) {
+
+    .menu,
+    .navbar-container button {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        color: #FF5403;
+        font-size: 35px;
+    }
+
+    .navbar-container {
+        gap: 0px;
+        padding: 0px 20px;
+        justify-content: space-between;
+        height: 80px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -709,6 +727,46 @@ menu li {
 
     .header p {
         font-size: 10px;
+    }
+
+    .select-tab select,
+    .select-tab input {
+        flex: 0;
+    }
+
+    .select-tab {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .select-tab div {
+        width: 100%;
+    }
+
+    .overlay-section-links button {
+        margin: 17px 0 0 0;
+        /*nu inteleg de ce aici nu imi da voie sa pun padding de sus. Cand pun padding border apare fix sub text. Iar daca pun 3 paddings si o margin efectul e ca in design.*/
+    }
+
+    .overlay-section-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .overlay-section {
+        width: 80%;
+        right: 0px;
+        left: 0px;
+        margin: auto;
+    }
+    
+    .overlay-section * /*nu am putut sa pun padding de 50px, era undeva conflict dar nu l-am gasit. am gasit asa iesire din situatie. Dar oricum imi era interesant de ce nu imi reusea cu padding*/{
+        width: 95%;
+        margin: auto;
+    }
+
+    .overlay-section button {
+        margin-bottom: 20px;
     }
 
     .event-card {
@@ -865,16 +923,6 @@ menu li {
         padding: 0px;
         top: -150px;
     }
-
-    .select-tab {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .select-tab div {
-        width: 100%;
-    }
-
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1300px) {
@@ -886,22 +934,22 @@ menu li {
 }
 
 input[type="date"]::before {
-	color: #2D93EA;
-	content: attr(placeholder);
+    color: #2D93EA;
+    content: attr(placeholder);
 }
 
 input[type="date"] {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 input[type="date"]:focus,
 input[type="date"]:valid {
-	color: #2D93EA;
+    color: #2D93EA;
 }
 
 input[type="date"]:focus::before,
 input[type="date"]:valid::before {
-	content: "" !important;
+    content: "" !important;
 }
 
 ::-webkit-calendar-picker-indicator {
