@@ -91,23 +91,13 @@
                 <option value="Island">Island</option>
             </select>
 
-                <div class="flight-date-input">
-                    <label for="flightdate">Check in date</label>
-                    <input type="date" id="flightdate" name="flightdate" placeholder="Check in date" />
-                </div>
+            <input type="date" required id="flightdate" name="flightdate" placeholder="Check in date" />
 
+            <input type="date" required id="returndate" name="returndate" placeholder="Check out date">
 
-                <div class="return-date-input">
-                    <label for="returndate">Check out date</label>
-                    <input type="date" id="returndate" name="returndate">
-                </div>
-
-                <div class="person-number-input">
-                    <input type="number" id="persons" name="person" min="0" max="10"  placeholder="Person"/>
-                </div>
+            <input type="number" id="persons" name="person" min="0" max="10"  placeholder="Person"/>
                 <!--cum se stilizeaza aici frumos forms, inputs, etc?-->
-<div><button>Search</button></div>
-                
+            <button>Search</button>
         </div>
     </section>
 
@@ -254,11 +244,16 @@
     <div class="review-container">
         <header>
             <p>What they Said</p>
-            <div class="review-nav-buttons">
+            <!--<div class="review-nav-buttons">
                 <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-left"></i></span></button></div>
                 <div><button><span style="cursor:pointer"><i class="fa-solid fa-chevron-right"></i></span></button>
                 </div>
             </div>
+        -->
+        <div class="review-nav-buttons">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
         </header>
         <!--Initial era:
      <div class="review-nav-buttons">
