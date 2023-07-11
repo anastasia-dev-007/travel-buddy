@@ -604,15 +604,11 @@ menu li {
 .overlay-section {
     position: absolute;
     padding: 31px 24px;
-    width: 75%;
-    height: 192px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 39px;
     background: #FFF;
     box-shadow: 0px -1.9647520780563354px 2.2138051986694336px 0px rgba(167, 207, 255, 0.02), 0px -4.721572399139404px 5.32008171081543px 0px rgba(167, 207, 255, 0.03), 0px -8.890301704406738px 10.017241477966309px 0px rgba(167, 207, 255, 0.04), 0px -15.858778953552246px 17.869047164916992px 0px rgba(167, 207, 255, 0.04), 0px -29.66210174560547px 33.422088623046875px 0px rgba(167, 207, 255, 0.05), 0px -71px 80px 0px rgba(167, 207, 255, 0.07);
     top: -50px;
+    right: 187px;
+    left: 187px;
 }
 
 /*end to review this for overlapping section*/
@@ -630,118 +626,48 @@ menu li {
     color: #51728E;
     font-size: 16px;
     font-family: Inter;
-    padding: 17px 22.5px;
+    padding: 0 22.5px 17px;
+    height: 36px;
 }
 
 .overlay-section-links button:hover {
-    border: 2px solid;
-    border-color: transparent transparent #2D93EA transparent;
+    border-bottom: 2px solid #2D93EA;
 }
 
 .select-tab {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 26px;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
-.select-tab div {
-    width: 17%;
+.select-tab select,
+.select-tab input {
+    border: 1px solid #2D93EA;
+    background: #FFF;
+    padding: 15px 21px;
+    color: #2D93EA;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    outline: none;
+    flex: 1 0 197px;
+}
+
+.select-tab input::placeholder {
+    color: #2D93EA;
 }
 
 .select-tab button {
-    display: flex;
-    width: 100%;
-    /*width: 198px;*/
-    height: 52px;
     padding: 13px 50px;
-    justify-content: center;
-    align-items: center;
-    background: var(--btn-orang, #FF5403);
+    background: #FF5403;
     border: none;
-    gap: 10px;
     color: #FFF;
     font-size: 18px;
     font-family: Inter;
     font-weight: 600;
-}
-
-select {
-    width: 100%;
-    /*width: 197px;*/
-    height: 55px;
-    padding: 15px 21px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #2D93EA;
-    background: #FFF;
-    color: #2D93EA;
-    font-size: 16px;
-    font-family: Inter;
-    font-weight: 300;
-}
-
-input[type=date] {
-    width: 100%;
-    /*width: 197px;*/
-    padding: 15px 21px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #2D93EA;
-    background: #FFF;
-    color: #2D93EA;
-    font-size: 16px;
-    font-family: Inter;
-    font-weight: 300;
-}
-
-input[type=number] {
-    display: flex;
-    width: 100%;
-    /*width: 197px;*/
-    height: 55px;
-    padding: 15px 21px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #2D93EA;
-    background: #FFF;
-    color: #2D93EA;
-    font-size: 16px;
-    font-family: Inter;
-    font-weight: 300;
-}
-
-input[type="number"]::placeholder {
-    color: #2D93EA;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-}
-
-.flight-date-input,
-.return-date-input {
-    position: relative;
-}
-
-.flight-date-input input:focus,
-input:focus .return-date-input input:focus {
-    border: none;
-}
-
-.flight-date-input label,
-.return-date-input label {
-    color: #2D93EA;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    position: absolute;
-    top: 17px;
-    left: 20px;
+    flex-grow: 1;
 }
 
 .mobile-menu {
@@ -935,25 +861,49 @@ input:focus .return-date-input input:focus {
         margin-bottom: 0px;
     }
 
-.overlay-section {
-    padding: 0px;
-    top: -150px;
-}
-.select-tab {
-    flex-direction: column;
-    gap: 5px;
+    .overlay-section {
+        padding: 0px;
+        top: -150px;
+    }
+
+    .select-tab {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .select-tab div {
+        width: 100%;
+    }
+
 }
 
-.select-tab div {
-    width: 100%;
-}
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+    .event-card {
+        margin: 0 auto;
+        width: 50%;
+    }
 
 }
 
-@media only screen and (min-width: 769px) and  (max-width: 1300px) {
-.event-card {
-    margin: 0 auto;
-    width: 50%;
+input[type="date"]::before {
+	color: #2D93EA;
+	content: attr(placeholder);
 }
 
+input[type="date"] {
+	color: #ffffff;
+}
+
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: #2D93EA;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%232D93EA" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
