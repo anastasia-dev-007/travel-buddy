@@ -43,7 +43,7 @@ menu li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .menu a:link,
@@ -52,12 +52,14 @@ menu li {
     font-size: 18px;
     font-family: Inter;
     color: #696969;
-    text-decoration: none
+    text-decoration: none;
+    padding: 15px;
 }
 
 .navbar-container .menu a:hover {
     background-color: #2d92ea3a;
-    padding: 15px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-container button {
